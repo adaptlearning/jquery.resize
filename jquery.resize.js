@@ -107,7 +107,10 @@
     //check if measure has the same values as last
     if (item._resizeData !== undefined && item._resizeData === measure.uniqueMeasurementId) return;
     item._resizeData = measure.uniqueMeasurementId;
-
+    
+    //make sure to keep listening until no more resize changes are found
+    loopData.lastEvent = (new Date()).getTime();
+    
     item.$element.trigger('resize');
   }
 
