@@ -12,3 +12,5 @@ $("selector").on("resize", function() {
 	/* works when this plugin is added */
 });
 ```
+
+Will listen for resizes on window mousedown mouseup keyup keydown and scroll for 500 milliseconds or until no other resize changes are detected. Will trigger at 250 millisecond intervals.
