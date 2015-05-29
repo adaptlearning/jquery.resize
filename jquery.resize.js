@@ -135,7 +135,7 @@
     loopData.interval = null;
   }
 
-  $(window).on("mousedown mouseup keyup keydown", startLoop);
+  $('body').on("mousedown mouseup keyup keydown", startLoop);
   $(window).on("resize", startLoop);
 
 
