@@ -1,4 +1,4 @@
-//https://github.com/cgkineo/jquery.resize 2015-08-13
+//https://github.com/cgkineo/jquery.resize 2016-02-02
 
 (function() {
 
