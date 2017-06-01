@@ -5,7 +5,7 @@
 
     // skip if library is already handling resize events
     if ($.event.special.resize) return;
-    // skip is old library has been loaded
+    // skip if old library has been loaded
     if ($.fn.off.elementResizeOriginalOff) return;
 
     // handler id generation
