@@ -152,7 +152,6 @@
 
         lastMain: (new Date()).getTime(),
 
-
         isThrottled: function() {
             var passedTime = (new Date()).getTime() - loop.lastMain;
             if (passedTime > loop.intervalDuration) return false;
