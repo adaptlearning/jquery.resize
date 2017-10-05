@@ -1,5 +1,5 @@
 'use strict';
-// jquery.resize 2017-09-07 https://github.com/adaptlearning/jquery.resize
+// jquery.resize 2017-10-05 https://github.com/adaptlearning/jquery.resize
 
 (function() {
 
