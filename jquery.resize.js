@@ -166,6 +166,11 @@
             }
 
             loop.lastMain = (new Date()).getTime();
+            
+            if (this.hasExpired()) {
+                loop.stop();
+                return;
+            }
 
             if (handlers.registered.length == 0) {
                 // nothing to check
