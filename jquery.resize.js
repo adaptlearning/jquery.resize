@@ -230,24 +230,6 @@
 
     });
 
-    // jQuery interfaces
-    // element functions
-    $.extend($.fn, {
-
-        resize: function resize(callback) {
-
-            if (callback) {
-                // standard event attachment jquery api behaviour
-                this.on("resize", callback);
-                return this;
-            }
-
-            return this;
-
-        }
-
-    });
-
     var measurements = {
 
         featureDetect: function() {
