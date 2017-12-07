@@ -45,8 +45,7 @@
             handlers.registered.push({ 
                 id: expando.make(element, data),
                 $element: $element,
-                _measurement: measurements.get($element).uniqueMeasurementId,
-                _hasTriggered: false
+                _measurement: measurements.get($element).uniqueMeasurementId
             });
             handlers.shouldReProcess = true;
 
@@ -83,17 +82,12 @@
                     var measure = measurements.get(item.$element);
 
                     // check if measure has the same values as last
-                    var wasPreviouslyMeasured = (item._measurement !== undefined);
-
-                    if (wasPreviouslyMeasured && item._hasTriggered) {
-                        var hasMeasureChanged = (item._measurement != measure.uniqueMeasurementId);
-                        if (!hasMeasureChanged) {
-                            continue;
-                        }
+                    var hasMeasureChanged = (item._measurement !== measure.uniqueMeasurementId);
+                    if (!hasMeasureChanged) {
+                        continue;
                     }
 
                     item._measurement = measure.uniqueMeasurementId;
-                    item._hasTriggered = true;
 
                     handlers.trigger(item);
 
